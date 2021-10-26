@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const fileUpload = require("express-fileupload");
 const cookieParser = require("cookie-parser");
+const path = require('path')
 
 
 const app = express();
@@ -35,9 +36,14 @@ app.use("/api", require('./routes/categoryRoutes'));
 app.use("/api", require('./routes/productRoutes'));
 app.use("/api", require("./routes/uploadRoutes"));
 app.use("/api", require("./routes/paymentRoutes"));
-app.get("/", (req, res) => {
-  res.send("server ready");
-});
+
+
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static('frontend/build'))
+  app.get('*',(req,res) => {
+    res.sendFile(path.join(__dirname,'frontend','build','index.html'))
+  })
+}
 
 const PORT = process.env.PORT || 5000;
 

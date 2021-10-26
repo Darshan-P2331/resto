@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+    "start": "node server.js",
+    "server": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
+    "client": "cd frontend && npm run start",
+    "server-install": "npm install",
+    "client-install": "cd frontend && npm install",
+    "install-all": "concurrently \"npm run server-install\" \"npm run client-install\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -19,6 +26,7 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cloudinary": "^1.27.0",
+    "concurrently": "^6.3.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
