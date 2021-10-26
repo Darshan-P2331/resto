@@ -1,0 +1,98 @@
+.create_product{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.create_product .upload{
+    max-width: 450px;
+    height: 450px;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 20px;
+    position: relative;
+}
+
+.create_product #file_up{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+
+.create_product #file_up::before{
+    content: '+';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: white;
+    color: #27ae60;
+    font-size: 17rem;
+    text-align: center;
+    cursor: pointer;
+    margin: auto;
+}
+
+.create_product #file_img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+}
+
+.create_product #file_img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.create_product #file_img span{
+    position: absolute;
+    top: -13px;
+    right: -13px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-weight: 900;
+    color: crimson;
+}
+
+.create_product form{
+    max-width: 500px;
+    min-width: 290px;
+    width: 100%;
+    margin: 15px 30px;
+}
+
+.create_product form .inputBox{
+    padding: .7rem 0;
+    width: 79%;
+}
+
+.create_product form label{
+    font-size: 1.7rem;
+    color: #666;
+}
+
+.create_product form input,
+.create_product form select{
+    width: 100%;
+    margin-top: .5rem;
+    padding: 1rem 1.2rem;
+    width: 100%;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    text-transform: none;
+    color: #130f40;
+    background: #f7f7f7;
+}

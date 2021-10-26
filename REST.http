@@ -1,0 +1,99 @@
+@url=http://localhost:5000
+
+###
+GET {{url}} HTTP/1.1
+
+### Register router
+POST {{url}}/user/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "User",
+    "email": "user@gmail.com",
+    "password": "12345678"
+}
+
+### account Activation router
+POST {{url}}/user/activation HTTP/1.1
+Content-Type: application/json
+
+{
+    "activation_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVXNlciIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRhQ1VNTjlhV2hJQ3RqZXhicjRoNHZ1NC4zVXA3RUVOTzd1RjJVeUJsOFJaQUV3VTBWR0NYNiIsImlhdCI6MTYzNDY0NzQ3NCwiZXhwIjoxNjM0NjQ3Nzc0fQ.8E925lz8TjQMYhG9VU2NUhsmaZ70BeoRlKJJu5Val44"
+}
+
+
+### Login route
+POST {{url}}/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "12345678"
+}
+
+### Logout route
+GET {{url}}/user/logout HTTP/1.1
+
+### Refresh token
+POST {{url}}/user/refresh_token HTTP/1.1
+Content-Type: application/json
+
+
+### Forgot password router
+POST {{url}}/user/forgot HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com"
+}
+
+### Reset password
+POST {{url}}/user/reset HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNmFjZWFjNTc0NDZjNmMzYzhiYTc5YyIsImlhdCI6MTYzNDQ3Mjk3MSwiZXhwIjoxNjM0NDczODcxfQ.fWdwGcoSDh5qREF3bnrWPBco2RKmSIoOA9zBnSQJDx4
+
+{
+    "password": "12345678"
+}
+
+### User info
+GET {{url}}/user/info HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNmFjZWFjNTc0NDZjNmMzYzhiYTc5YyIsImlhdCI6MTYzNDYyNjY0MCwiZXhwIjoxNjM0NjI3NTQwfQ.pTrfdqcptil60NgllcLCzRI3k7Tqw7cOCcmP-8qBSG8
+
+### Update user info
+PATCH {{url}}/user/update HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNmFjZWFjNTc0NDZjNmMzYzhiYTc5YyIsImlhdCI6MTYzNDM5MTE2OSwiZXhwIjoxNjM0MzkyMDY5fQ.NI2_ulP-gEYWzEPWQZF9g1fsDQiP1bKNwRtrqLcQy4s
+
+{
+    "name": "admin",
+    "avatar": "https://res.cloudinary.com/dn2115qyt/image/upload/v1631276603/avatar/SeekPng.com_male-symbol-png_410093_l6erpx.png"
+}
+
+### add Category
+POST {{url}}/api/category HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNmFjZWFjNTc0NDZjNmMzYzhiYTc5YyIsImlhdCI6MTYzNDU1NTYwMCwiZXhwIjoxNjM0NTU2NTAwfQ.uCxZfA49eqE-SH3IsLzePblfX0c-eDVl_9JpKxFBds8
+
+{
+    "name": "soft drinks"
+}
+
+### get categories
+GET {{url}}/api/category HTTP/1.1
+
+### update category
+PUT {{url}}/api/category/616d58fe2fe4449560f16b0e HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNmFjZWFjNTc0NDZjNmMzYzhiYTc5YyIsImlhdCI6MTYzNDU1NTYwMCwiZXhwIjoxNjM0NTU2NTAwfQ.uCxZfA49eqE-SH3IsLzePblfX0c-eDVl_9JpKxFBds8
+
+{
+    "name": "Soft drinks"
+}
+
+### delete category
+DELETE {{url}}/api/category/ HTTP/1.1
+
+###
+POST {{url}}/api/payment HTTP/1.1
+Content-Type: application/json

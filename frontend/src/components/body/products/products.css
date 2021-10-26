@@ -1,0 +1,110 @@
+.products_admin .box-container{
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.products_admin .box-container .box{
+  border-radius: .5rem;
+  max-width: 271px;
+    position: relative;
+    background: #f7f7f7;
+    padding: 2rem;
+    text-align: center;
+}
+
+.products_admin .box-container .box .image{
+  margin: 1rem 0;
+}
+
+.products_admin .box-container .box .image img{
+  height: 15rem;
+}
+
+.products_admin .box-container .box .content h3{
+  font-size: 2rem;
+    color: #130f40;
+}
+
+.products_admin .box-container .box .content .stars{
+  padding: 1rem 0;
+    font-size: 1.7rem;
+}
+
+.products_admin .box-container .box .content .stars i{
+  color: gold;
+}
+
+.products_admin .box-container .box .content .price{
+  font-size: 2rem;
+    color: #130f40;
+}
+
+.products_admin .box-container .box .content .row{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.products_admin .box-container .box input[type='checkbox']{
+  position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    height: 20px;
+    width: 20px;
+    transform: translateY(5px);
+    cursor: pointer;
+}
+
+/* ------------------------- Delete All ------------------------- */
+
+.delete-all {
+    text-align: right;
+    margin: 20px;
+  }
+  
+  .delete-all input {
+    height: 20px;
+    width: 20px;
+    transform: translateY(5px);
+    margin: 0 15px;
+  }
+  
+  .delete-all span {
+    text-transform: uppercase;
+    color: var(--green);
+    letter-spacing: 1.3px;
+  }
+  
+  .delete-all button {
+    border: 1px solid crimson;
+    padding: 10px 15px;
+    color: crimson;
+    text-transform: uppercase;
+  }
+  
+
+/* ------------------------- Filter Menu ------------------------ */
+
+.filter_menu {
+    width: 100%;
+    min-height: 40px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px 0;
+  }
+  
+  .filter_menu select,
+  .filter_menu input {
+    border: 1px solid #ccc;
+    outline: none;
+    height: 40px;
+  }
+  
+  .filter_menu input {
+    flex: 1;
+    margin: 0 10px;
+  }
