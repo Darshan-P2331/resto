@@ -60,7 +60,7 @@ export default function Home() {
 
       <section className="about" id="about">
         <div className="image">
-          <img src="./images/about-img.png" alt="" />
+          <img src="https://res.cloudinary.com/dhtfc36hh/image/upload/v1635258437/Resto/about-img_gsicqy.png" alt="" />
         </div>
 
         <div className="content">
@@ -157,7 +157,7 @@ export default function Home() {
           className="row-banner"
           style={{
             background:
-              "url(./images/row-banner.png) center center / cover no-repeat",
+              "url(https://res.cloudinary.com/dhtfc36hh/image/upload/v1635258577/Resto/row-banner_dndjqm.png) center center / cover no-repeat",
           }}
         >
           <div className="content">
@@ -170,7 +170,7 @@ export default function Home() {
 
         <div className="grid-banner">
           <div className="grid">
-            <img src="./images/banner-1.png" alt="" />
+            <img src="https://res.cloudinary.com/dhtfc36hh/image/upload/v1635258484/Resto/banner-1_vfzpmw.png" alt="" />
             <div className="content">
               <span>special offer</span>
               <h3>upto 50% off</h3>
@@ -178,7 +178,7 @@ export default function Home() {
             </div>
           </div>
           <div className="grid">
-            <img src="./images/banner-2.png" alt="" />
+            <img src="https://res.cloudinary.com/dhtfc36hh/image/upload/v1635258512/Resto/banner-2_szj2ev.png" alt="" />
             <div className="content center">
               <span>special offer</span>
               <h3>upto 25% extra</h3>
@@ -186,7 +186,7 @@ export default function Home() {
             </div>
           </div>
           <div className="grid">
-            <img src="./images/banner-3.png" alt="" />
+            <img src="https://res.cloudinary.com/dhtfc36hh/image/upload/v1635258539/Resto/banner-3_lfst56.png" alt="" />
             <div className="content">
               <span>limited offer</span>
               <h3>100% cashback</h3>
