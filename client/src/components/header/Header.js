@@ -37,8 +37,7 @@ export default function Header() {
   const loggedRouter = () => {
     return (
       <>
-        <Link to="#about">about</Link>
-        <Link to="/profile">profile</Link>
+        <Link to="">about</Link>
       </>
     );
   };
@@ -55,6 +54,7 @@ export default function Header() {
       <nav className={menu ? "navbar active" : "navbar"}>
         <Link to="/">home</Link>
         {isAdmin ? adminRouter() : loggedRouter()}
+        <Link to='/profile'>Profile</Link>
       </nav>
 
       <div className="icons">

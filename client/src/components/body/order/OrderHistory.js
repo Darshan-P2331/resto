@@ -26,7 +26,7 @@ export default function OrderHistory(props) {
 }, [token, isAdmin,setHistory])
 
     return (
-        <section>
+        <section style={{overflowX: 'auto'}}>
             <table className="customers">
             <thead>
             <tr>
