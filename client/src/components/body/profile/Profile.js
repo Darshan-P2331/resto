@@ -172,7 +172,7 @@ export default function Profile(props) {
         <div className="col-left">
           <h2>{isAdmin ? "Admin Profile" : "User Profile"}</h2>
           <div className="avatar">
-            <img src={avatar ? avatar : user.avatar} alt="" />
+            <img src={avatar ? avatar : user.avatar} alt="" loading="lazy" />
             <span>
               <i className="fas fa-camera"></i>
               <p>Change</p>

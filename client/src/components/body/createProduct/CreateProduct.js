@@ -141,7 +141,7 @@ export default function CreateProduct() {
           <Loading />
         ) : (
           <div id="file_img" style={styleUpload}>
-            <img src={images ? images.url : ""} alt="" />
+            <img src={images ? images.url : ""} alt="" loading="lazy" />
             <span onClick={handleDestroy}>X</span>
           </div>
         )}

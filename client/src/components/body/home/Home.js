@@ -46,11 +46,12 @@ export default function Home() {
         </div>
 
         <div className="image">
-          <img src="./images/home-img.png" alt="" className="home-img" />
+          <img src="./images/home-img.png" alt="" className="home-img" loading="lazy" />
           <img
             src="./images/home-parallax-img.png"
             alt=""
             className="home-parallax-img"
+            loadng="lazy"
             style={{
               transform: `translateX(${animate.y}px) translateY(${animate.x}px)`,
             }}
@@ -60,7 +61,7 @@ export default function Home() {
 
       <section className="about" id="about">
         <div className="image">
-          <img src="https://res.cloudinary.com/dhtfc36hh/image/upload/v1635258437/Resto/about-img_gsicqy.png" alt="" />
+          <img src="https://res.cloudinary.com/dhtfc36hh/image/upload/v1635258437/Resto/about-img_gsicqy.png" alt="" loading="lazy" />
         </div>
 
         <div className="content">
@@ -74,19 +75,19 @@ export default function Home() {
           <button className="btn">read more</button>
           <div className="icons-container">
             <div className="icons">
-              <img src="./images/serv-1.png" alt="fast delivery" />
+              <img src="./images/serv-1.png" alt="fast delivery" loading="lazy" />
               <h3>fast delivery</h3>
             </div>
             <div className="icons">
-              <img src="./images/serv-2.png" alt="fresh food" />
+              <img src="./images/serv-2.png" alt="fresh food" loading="lazy" />
               <h3>fresh food</h3>
             </div>
             <div className="icons">
-              <img src="./images/serv-3.png" alt="best quality" />
+              <img src="./images/serv-3.png" alt="best quality" loading="lazy" />
               <h3>best quality</h3>
             </div>
             <div className="icons">
-              <img src="./images/serv-4.png" alt="24/7 support" />
+              <img src="./images/serv-4.png" alt="24/7 support" loading="lazy" />
               <h3>24/7 support</h3>
             </div>
           </div>
@@ -94,7 +95,7 @@ export default function Home() {
       </section>
       <section className="category">
         <div className="box" onClick={() => handleCategory("")}>
-          <img src="" alt="" />
+          <img src="" alt="" loading="lazy" />
           <h3>All</h3>
         </div>
         {categories.map((item) => (
@@ -103,7 +104,7 @@ export default function Home() {
             key={item._id}
             onClick={() => handleCategory("category=" + item._id)}
           >
-            <img src={item.image.url} alt={item.name} />
+            <img src={item.image.url} alt={item.name} loading="lazy" />
             <h3>{item.name}</h3>
           </div>
         ))}
@@ -119,7 +120,7 @@ export default function Home() {
           {products.map((product) => (
             <div className="box" key={product._id}>
               <div className="image">
-                <img src={product.images.url} alt="" />
+                <img src={product.images.url} alt="" loading="lazy" />
               </div>
               <div className="content">
                 <h3>{product.title}</h3>
@@ -170,7 +171,7 @@ export default function Home() {
 
         <div className="grid-banner">
           <div className="grid">
-            <img src="https://res.cloudinary.com/dhtfc36hh/image/upload/v1635258484/Resto/banner-1_vfzpmw.png" alt="" />
+            <img src="https://res.cloudinary.com/dhtfc36hh/image/upload/v1635258484/Resto/banner-1_vfzpmw.png" alt="" loading="lazy" />
             <div className="content">
               <span>special offer</span>
               <h3>upto 50% off</h3>
@@ -178,7 +179,7 @@ export default function Home() {
             </div>
           </div>
           <div className="grid">
-            <img src="https://res.cloudinary.com/dhtfc36hh/image/upload/v1635258512/Resto/banner-2_szj2ev.png" alt="" />
+            <img src="https://res.cloudinary.com/dhtfc36hh/image/upload/v1635258512/Resto/banner-2_szj2ev.png" alt="" loading="lazy" />
             <div className="content center">
               <span>special offer</span>
               <h3>upto 25% extra</h3>
@@ -186,7 +187,7 @@ export default function Home() {
             </div>
           </div>
           <div className="grid">
-            <img src="https://res.cloudinary.com/dhtfc36hh/image/upload/v1635258539/Resto/banner-3_lfst56.png" alt="" />
+            <img src="https://res.cloudinary.com/dhtfc36hh/image/upload/v1635258539/Resto/banner-3_lfst56.png" alt="" loading="lazy" />
             <div className="content">
               <span>limited offer</span>
               <h3>100% cashback</h3>
@@ -203,17 +204,17 @@ export default function Home() {
         </div>
         <div className="icons-container">
           <div className="icons">
-            <img src="./images/icon-1.png" alt="" />
+            <img src="./images/icon-1.png" alt="" loading="lazy" />
             <h3>7:00am to 10:30pm</h3>
           </div>
 
           <div className="icons">
-            <img src="./images/icon-2.png" alt="" />
+            <img src="./images/icon-2.png" alt="" loading="lazy" />
             <h3>+123-456-7890</h3>
           </div>
 
           <div className="icons">
-            <img src="./images/icon-3.png" alt="" />
+            <img src="./images/icon-3.png" alt="" loading="lazy" />
             <h3>mumbai, india - 400104</h3>
           </div>
         </div>

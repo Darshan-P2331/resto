@@ -95,7 +95,7 @@ export default function Cart() {
                 className="fas fa-times"
                 onClick={() => removeProduct(item._id)}
               ></i>
-              <img src={item.images.url} alt="" />
+              <img src={item.images.url} alt="" loading="lazy" />
               <div className="content">
                 <h3>{item.title}</h3>
                 <span> quantity : </span>

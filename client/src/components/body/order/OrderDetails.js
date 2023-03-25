@@ -29,7 +29,7 @@ export default function OrderDetails() {
         <div className="box-container">
           {orderDetails.orderItems.map((item) => (
             <div className="box" key={item._id}>
-              <img src={item.images.url} alt="" />
+              <img src={item.images.url} alt="" loading="lazy" />
               <div className="content">
                 <h3>{item.title}</h3>
                 <span> quantity : </span>

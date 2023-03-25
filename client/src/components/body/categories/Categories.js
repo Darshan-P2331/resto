@@ -135,7 +135,7 @@ export default function Categories() {
             <Loading />
           ) : (
             <div id="file_img" style={styleUpload}>
-              <img src={image ? image.url : ""} alt="" />
+              <img src={image ? image.url : ""} alt="" loading="lazy" />
               <span onClick={handleDestroy}>X</span>
             </div>
           )}
@@ -160,7 +160,7 @@ export default function Categories() {
       <div className="box-container">
         {categories.map((item) => (
           <div className="box" key={item._id} >
-            <img src={item.image.url} alt="" />
+            <img src={item.image.url} alt="" loading="lazy" />
             <div className="content">
               <h3>{item.name}</h3>
               <i className="fas fa-edit" onClick={() => editCategory(item._id,item.name,item.image)} ></i>

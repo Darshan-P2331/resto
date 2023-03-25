@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Message from '../../utils/Message'
 
-export default function ActivateEmail() {
+export default function ActivateEmail() { 
     const {activation_token} = useParams()
     const [err, setErr] = useState('')
     const [success, setSuccess] = useState('')
