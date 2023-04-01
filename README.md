@@ -1,6 +1,6 @@
 # Resto. food ordering website
 
-### For live demo [click here](https://resto-webapp.herokuapp.com/)
+### For live demo [click here](https://resto-7p9s.onrender.com/)
 
  Technologies used:
  * [MongoDB](https://www.mongodb.com/)
